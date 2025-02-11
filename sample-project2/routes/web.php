@@ -1,7 +1,10 @@
 <?php
 
+use App\Http\Controllers\WelcomeController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+//each route can have optionally name
+Route::get('/', [WelcomeController::class, 'welcome'])->name('welcomee');
+
+
